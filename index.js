@@ -23,6 +23,21 @@ app.get('/lian',(req,res)=>{
     )
 })
 
+app.get("/steve",(req,res)=>{
+    const htmlContent = `
+    <html>
+    <head>
+      <title>Steve's Love Message</title>
+    </head>
+    <body>
+      <h1>Steve loves (loved) Lian 😂😂😂😂</h1>
+      <h2>Only if she does it back 😌😌😢😢😢😢</h2>
+    </body>
+  </html>
+    `;
+    res.send(htmlContent)
+})
+
 app.listen( port,()=>{
     console.log(`server is listening on http://localhost:${port}`)
 })
