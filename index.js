@@ -16,7 +16,10 @@ app.get('/',(req,res)=>{
 
 app.get('/lian',(req,res)=>{
     res.json(
-        {message_to_the_world: "steve loves (loved) lian"}
+        {
+            message_to_the_world: "steve loves (loved) lian 😂😂😂😂",
+            condition: "only if vise-versa is true 😌😌😢😢😢😢"
+        }
     )
 })
 
