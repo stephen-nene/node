@@ -38,6 +38,21 @@ app.get("/steve",(req,res)=>{
     res.send(htmlContent)
 })
 
+app.get('/*',(req,res)=>{
+    const htmlContent = `
+    <html>
+    <head>
+      <title>Error route</title>
+    </head>
+    <body>
+    <h1>Error 404</h1>
+      <h1>No root matches this route </h1>
+    </body>
+  </html>
+    `;
+    res.send(htmlContent)
+})
+
 app.listen( port,()=>{
     console.log(`server is listening on http://localhost:${port}`)
 })
