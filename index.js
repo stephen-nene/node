@@ -4,7 +4,6 @@ const app = express()
 const cors = require('cors');
 
 const port = 3000;
-const host = "localhost" ;
 
 app.use(express.json());
 app.use(cors());
@@ -15,6 +14,12 @@ app.get('/',(req,res)=>{
     )
 })
 
-app.listen(host, port,()=>{
-    console.log(`server is listening on http://${host}:${port}`)
+app.get('/lian',(req,res)=>{
+    res.json(
+        {message_to_the_world: "steve loves (loved) lian"}
+    )
+})
+
+app.listen( port,()=>{
+    console.log(`server is listening on http://localhost:${port}`)
 })
